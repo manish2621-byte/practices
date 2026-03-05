@@ -9,7 +9,7 @@ printf("\n%d",! (a>b && b>c || a>c));
 printf("\n%d",a + b >=c || a/b>=c);*/
 int a ;
 printf("enter the number : ");
-scanf("%d",&a + 6 / 2); 
-
+scanf("%d",&a);
+//printf("\n%d", a + 10 - 15 / 20 * 5 % 3);
     return 0;
 }
