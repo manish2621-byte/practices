@@ -1,0 +1,4 @@
+Id	Name	Score
+1	Alice	91
+2	Bob	84
+3	Charlie	77
