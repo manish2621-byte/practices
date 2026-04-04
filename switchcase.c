@@ -1,37 +1,47 @@
 #include <stdio.h>
+
 int main() {
-    int choice = 4;
-    switch(choice) {
-        case 1:
-            printf("sunday\n");
+    char op;
+    float num1, num2, result;
+
+    printf("Enter first number: ");
+    scanf("%f", &num1);
+
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c", &op);
+
+    printf("Enter second number: ");
+    scanf("%f", &num2);
+
+    switch(op) {
+        case '+':
+            result = num1 + num2;
+            printf("Result = %.2f", result);
             break;
-        case 2:
-            printf("monday\n");
+
+        case '-':
+            result = num1 - num2;
+            printf("Result = %.2f", result);
             break;
-        case 3:
-            printf("tuesday\n");
+
+        case '*':
+            result = num1 * num2;
+            printf("Result = %.2f", result);
             break;
-        default:
-            printf("Invalid choice\n");
-            int a=10,b=2;
-            char op = '*';
-            switch(op) {
-                case '+':
-                    printf("Addition: %d\n", a+b);
-                    break;
-                case '-':
-                    printf("Subtraction: %d\n", a-b);
-                    break;
-                case '*':
-                    printf("Multiplication: %d\n", a*b);
-                    break;
-                case '/':
-                    printf("Division: %d\n", a/b);
-                    break;
-                default:
-                    printf("Invalid operator\n");
+
+        case '/':
+            if(num2 != 0)
+                result = num1 / num2;
+            else {
+                printf("Error! Division by zero is not allowed.");
+                return 0;
             }
+            printf("Result = %.2f", result);
+            break;
+
+        default:
+            printf("Invalid Operator!");
     }
+
     return 0;
 }
-
