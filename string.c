@@ -49,25 +49,71 @@
 
 //   return 0;
 // }
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//     char str[] = "1234";
+
+//     int i = 0;
+//     int j = strlen(str) - 1;
+
+//     while (i < j) {
+//         char temp = str[i];
+//         str[i] = str[j];
+//         str[j] = temp;
+
+//         i++;
+//         j--;
+//     }
+
+//     printf("Reversed string: %s\n", str);
+
+//     return 0;
+// }
 #include <stdio.h>
-#include <string.h>
 
-int main() {
-    char str[] = "1234";
+// void removeSpaces(char *str) {
+//     int i = 0, j = 0;
 
-    int i = 0;
-    int j = strlen(str) - 1;
+//     while (str[i] != '\0') {
+//         if (str[i] != ' ') {
+//             str[j++] = str[i];
+//         }
+//         i++;
+//     }
+//     str[j] = '\0';
+// }
 
-    while (i < j) {
-        char temp = str[i];
-        str[i] = str[j];
-        str[j] = temp;
+// int main() {
+//     char str1[100] = "111 11 111 1111";
+//     char str2[] = "22 222 222 2222";
 
+//     removeSpaces(str1);
+//     removeSpaces(str2);
+
+//     printf("str1: %s\n", str1);
+//     printf("str2: %s\n", str2);
+
+//     return 0;
+// }
+int main(){
+    char str1[100],str2[100];
+    int i=0, j=0;
+    printf("enter your string_1: ");
+    fgets(str1,100,stdin);
+    printf("enter your string_2: ");
+    fgets(str2,100,stdin);
+    while(str1[i]!='\0'){
         i++;
-        j--;
     }
-
-    printf("Reversed string: %s\n", str);
-
+    while(str2[j]!='\0'){
+    
+        str1[i]=str2[j];
+        i++;
+        j++;
+    }
+    str1[i]='\0';
+    printf("output : %s",str1);
     return 0;
 }
